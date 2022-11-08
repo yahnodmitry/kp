@@ -1,0 +1,11 @@
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\bin\Debug\Kursovaya test.exe.config
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\bin\Debug\Kursovaya test.exe
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\bin\Debug\Kursovaya test.pdb
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.csproj.AssemblyReference.cache
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.csproj.SuggestedBindingRedirects.cache
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya_test.Form1.resources
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya_test.Properties.Resources.resources
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.csproj.GenerateResource.cache
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.csproj.CoreCompileInputs.cache
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.exe
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.pdb
