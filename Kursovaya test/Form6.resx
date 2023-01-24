@@ -117,14 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="map_ukr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map_ukr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-ukraine-map-map-vector-map-area" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-ukraine-map-map-vector-map-area.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_i" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>                                      РОЗРОБНИКИ ПРОЕКТУ:
+
+Відповідальний за архітектуру та алгоритми 
+Яхно Дмитро КНТ-151
+
+Розробник інтерфейсу 
+Болучевський Максим КНТ-131
+
+Обробка виключних ситуацій
+Андреєв Руслан КНТ-151
+
+Робота з даними
+Школа Денис КНТ-151
+</value>
   </data>
 </root>

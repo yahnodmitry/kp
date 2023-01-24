@@ -15,10 +15,12 @@ namespace Kursovaya_test
         Mineral min;
         double avalue;
         double aprice;
+        Form2 form_2;
 
-        public Form3(Mineral min)
+        public Form3(Mineral min, Form2 form2)
         {
             InitializeComponent();
+            form_2 = form2;
             this.min = min;
             Node<Yearly> temp = min.list.head;
             double sumvalue = 0, sumprice = 0;
@@ -56,7 +58,7 @@ namespace Kursovaya_test
                         income += this.aprice * value;
                         value -= this.avalue;
                     }
-                    label1.Text = time.ToString() + " | " + income.ToString();
+                    label1.Text = "Очікуваний прибуток за " + time.ToString() + " рік: " + income.ToString();
                 }
                 
             }
@@ -78,9 +80,27 @@ namespace Kursovaya_test
                         income += this.aprice * value;
                         value -= this.avalue;
                     }
-                    label1.Text = time.ToString() + " | " + income.ToString();
+                    label1.Text = "Очікуваний прибуток до " + time.ToString() + " року: " + income.ToString();
                 }
             }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Enabled = true;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Enabled = true;
+        }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            form_2.Show();
+            
+            
         }
         //public Mineral mineral;
     }

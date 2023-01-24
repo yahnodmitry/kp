@@ -55,6 +55,7 @@ namespace Kursovaya_test
             Form2 form2 = new Form2(name);
             //this.Hide();
             form2.Show();
+            this.Hide();
 
         }
 
@@ -96,7 +97,16 @@ namespace Kursovaya_test
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Information 9");
-        } 
+        }
+
+        
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
+            this.Hide();
+        }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
