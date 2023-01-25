@@ -1,0 +1,20 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Kursovaya_test.Mineral, Kursovaya test]], mscorlib",
+  "$values": [
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Каолін",
+      "Value": 100000.0
+    },
+    {
+      "$type": "Kursovaya_test.Liquid, Kursovaya test",
+      "Name": "Вугілля",
+      "Value": 200000.0
+    },
+    {
+      "$type": "Kursovaya_test.Gas, Kursovaya test",
+      "Name": "Гравій",
+      "Value": 300000.0
+    }
+  ]
+}
