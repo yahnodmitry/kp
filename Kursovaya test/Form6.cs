@@ -27,5 +27,10 @@ namespace Kursovaya_test
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void Form6_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -15,13 +15,15 @@ namespace Kursovaya_test
         Mineral min;
         double avalue;
         double aprice;
-        Form2 form_2;
+        string state_n;
+        //Form2 form_2;
         int enter = 0;
 
-        public Form3(Mineral min, Form2 form2)
+        public Form3(Mineral min, string state)
         {
             InitializeComponent();
-            form_2 = form2;
+            //form_2 = form2;
+            state_n = state;
             this.min = min;
             Node<Yearly> temp = min.list.head;
             double sumvalue = 0, sumprice = 0;
@@ -99,7 +101,8 @@ namespace Kursovaya_test
         private void Back_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            form_2.Show();
+            //form_2.Show();
+            Form2 form2 = new Form2(state_n);
             
             
         }
@@ -111,6 +114,11 @@ namespace Kursovaya_test
                 MessageBox.Show("Аби почати розрахунок оберіть потрібний пункт та введіть рік в поле напроти нього.", "Підказка!");
                 enter = 1;
             }
+        }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
         //public Mineral mineral;
     }

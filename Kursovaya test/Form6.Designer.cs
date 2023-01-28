@@ -71,6 +71,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Form6";
             this.Text = "Інформація про розробників";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form6_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

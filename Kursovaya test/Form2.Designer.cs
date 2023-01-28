@@ -165,6 +165,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.Text = "Список копалин";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.MouseEnter += new System.EventHandler(this.Form2_MouseEnter);
             this.ResumeLayout(false);
             this.PerformLayout();

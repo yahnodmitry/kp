@@ -14,11 +14,13 @@ namespace Kursovaya_test
     public partial class Form4 : Form
     {
         DoubleList<Mineral> list;
-        Form2 form_2;
-        public Form4(DoubleList<Mineral> list, Form2 form2)
+        //Form2 form_2;
+        string state_n;
+        public Form4(DoubleList<Mineral> list, string state)
         {
             this.list = list;
-            form_2= form2;
+            //form_2= form2;
+            state_n = state;
             InitializeComponent();
             
             testinput();
@@ -35,7 +37,7 @@ namespace Kursovaya_test
                 l.Name = list.find(i).data.Name;
                 l.Text = list.find(i).data.Name;
                 l.Location = new Point(10, i * 22);
-                l.Size = new Size(100, 20);
+                l.Size = new Size(200, 20);
                 l.Click += label_Click;
                 this.Controls.Add(panel1);
                 panel1.Controls.Add(l);
@@ -43,7 +45,7 @@ namespace Kursovaya_test
                 l2.Name = list.find(i).data.Name;
                 l2.Text = list.find(i).data.Name;
                 l2.Location = new  Point(10, i * 22);
-                l2.Size = new Size(100, 20);
+                l2.Size = new Size(200, 20);
                 l2.Click += label2_Click;
                 this.Controls.Add(panel2);
                 panel2.Controls.Add(l2);
@@ -121,10 +123,16 @@ namespace Kursovaya_test
         private void Back_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            form_2.Show();
+            //form_2.Show();
+            Form2 form2 = new Form2(state_n);
+            form2.Show();
             
         }
-        
+
+        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
     

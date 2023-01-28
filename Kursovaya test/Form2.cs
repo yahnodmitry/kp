@@ -97,9 +97,9 @@ namespace Kursovaya_test
             }
             if (m != null)
             {
-                Form3 form3 = new Form3(m, this);
+                Form3 form3 = new Form3(m, state);
                 form3.Show();
-                this.Hide();
+                this.Close();
             }
 
         }
@@ -114,14 +114,14 @@ namespace Kursovaya_test
 
         private void Comparison_btn_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4(lst, this);
+            Form4 form4 = new Form4(lst, state);
             form4.Show();
             this.Hide();
         }
 
         private void Back_btn_Click(object sender, EventArgs e)
         {
-            this.Hide();         
+            this.Hide();        
             Form1 form1 = new Form1();
             form1.Show();
 
@@ -151,6 +151,11 @@ namespace Kursovaya_test
                 MessageBox.Show("Натисність на назву копалини щоб пепрейти до статистики.", "Підказка!");
                 enter = 1;
             }
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

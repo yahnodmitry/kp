@@ -75,6 +75,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form4";
             this.Text = "Порівняння";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form4_FormClosing);
             this.ResumeLayout(false);
 
         }

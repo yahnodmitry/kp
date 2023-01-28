@@ -108,7 +108,7 @@ namespace Kursovaya_test
         {
             Form6 form6 = new Form6();
             form6.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Form1_MouseEnter(object sender, EventArgs e)
