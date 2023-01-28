@@ -70,7 +70,7 @@
             this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.textBox1);
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.Text = "Інформація про розробників";
             this.ResumeLayout(false);
             this.PerformLayout();
 

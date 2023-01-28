@@ -206,6 +206,7 @@
             this.Name = "Form1";
             this.Text = "Корисні копалини в країнах";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseEnter += new System.EventHandler(this.Form1_MouseEnter);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

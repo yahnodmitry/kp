@@ -31,3 +31,6 @@ C:\Users\yahno\source\repos\kp\Kursovaya test\bin\Debug\Newtonsoft.Json.dll
 C:\Users\yahno\source\repos\kp\Kursovaya test\bin\Debug\Newtonsoft.Json.xml
 C:\Users\yahno\source\repos\kp\Kursovaya test\obj\Debug\Kursovaya_test.Form6.resources
 C:\Users\yahno\source\repos\kp\Kursovaya test\obj\Debug\Kursovaya test.csproj.CopyComplete
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\bin\Debug\Newtonsoft.Json.dll
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\bin\Debug\Newtonsoft.Json.xml
+J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.csproj.CopyComplete

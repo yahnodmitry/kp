@@ -16,6 +16,7 @@ namespace Kursovaya_test
         double avalue;
         double aprice;
         Form2 form_2;
+        int enter = 0;
 
         public Form3(Mineral min, Form2 form2)
         {
@@ -101,6 +102,15 @@ namespace Kursovaya_test
             form_2.Show();
             
             
+        }
+
+        private void panel2_MouseEnter(object sender, EventArgs e)
+        {
+            if(enter==0)
+            {
+                MessageBox.Show("Аби почати розрахунок оберіть потрібний пункт та введіть рік в поле напроти нього.", "Підказка!");
+                enter = 1;
+            }
         }
         //public Mineral mineral;
     }

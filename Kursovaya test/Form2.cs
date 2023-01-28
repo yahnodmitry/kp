@@ -17,6 +17,7 @@ namespace Kursovaya_test
     
     public partial class Form2 : Form
     {
+        int enter = 0;
         private string state = "";
         private DoubleList<Mineral> lst;
         public Form2(string state)
@@ -70,7 +71,7 @@ namespace Kursovaya_test
                 l.Name = lst.find(i).data.Name;
                 l.Text = lst.find(i).data.Name;
                 l.Location = new Point(10, i * 22);
-                l.Size = new Size(40, 20);
+                l.Size = new Size(150, 20);
                 l.Click += label_Click;
                 this.Controls.Add(panel1);
                 panel1.Controls.Add(l);
@@ -140,6 +141,15 @@ namespace Kursovaya_test
             else
             {
                 //ошибка
+            }
+        }
+
+        private void Form2_MouseEnter(object sender, EventArgs e)
+        {
+            if(enter==0)
+            {
+                MessageBox.Show("Натисність на назву копалини щоб пепрейти до статистики.", "Підказка!");
+                enter = 1;
             }
         }
     }

@@ -13,13 +13,16 @@ namespace Kursovaya_test
 {
     public partial class Form1 : Form
     {
+        int enter=0;
         public Form1()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            
         }
         int width, height;
         int x, y;
-
+        
+        
 
         void control_MouseEnter(object sender, EventArgs e)
         {
@@ -106,6 +109,18 @@ namespace Kursovaya_test
             Form6 form6 = new Form6();
             form6.Show();
             this.Hide();
+        }
+
+        private void Form1_MouseEnter(object sender, EventArgs e)
+        {
+            if (enter ==0)
+            {
+                MessageBox.Show("Натисніть на країну для опрацювання данних.", "Підказка!");
+                
+                enter=1;
+                
+            }
+
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)

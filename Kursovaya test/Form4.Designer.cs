@@ -74,7 +74,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Порівняння";
             this.ResumeLayout(false);
 
         }
