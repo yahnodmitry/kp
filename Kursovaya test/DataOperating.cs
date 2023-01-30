@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Kursovaya_test
 {
@@ -85,7 +86,7 @@ namespace Kursovaya_test
                     //}
                     else
                     {
-                        //ошибка
+                        MessageBox.Show("Сообщение");
                         return null;
                     }
                     data = reader.ReadLine();
@@ -95,7 +96,7 @@ namespace Kursovaya_test
             }
             else
             {
-                //ошибка
+                MessageBox.Show("Такої руди в цій країні немає, будь ласка, введіть іншу.");
                 return null;
             }
             reader.Close();

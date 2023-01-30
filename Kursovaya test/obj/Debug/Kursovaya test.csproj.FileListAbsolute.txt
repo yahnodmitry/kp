@@ -34,3 +34,21 @@ C:\Users\yahno\source\repos\kp\Kursovaya test\obj\Debug\Kursovaya test.csproj.Co
 J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\bin\Debug\Newtonsoft.Json.dll
 J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\bin\Debug\Newtonsoft.Json.xml
 J:\MKSM\ZNTU\kursovaya robota\Kursovaya test\Kursovaya test\obj\Debug\Kursovaya test.csproj.CopyComplete
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\bin\Debug\Kursovaya test.exe.config
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\bin\Debug\Kursovaya test.exe
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\bin\Debug\Kursovaya test.pdb
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\bin\Debug\Newtonsoft.Json.dll
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\bin\Debug\Newtonsoft.Json.xml
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya test.csproj.AssemblyReference.cache
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya test.csproj.SuggestedBindingRedirects.cache
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya_test.Form1.resources
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya_test.Form2.resources
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya_test.Form3.resources
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya_test.Form4.resources
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya_test.Form6.resources
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya_test.Properties.Resources.resources
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya test.csproj.GenerateResource.cache
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya test.csproj.CoreCompileInputs.cache
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya test.csproj.CopyComplete
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya test.exe
+D:\Projects_Ruslan\Курсач\Kur-2\Kursovaya test\obj\Debug\Kursovaya test.pdb
