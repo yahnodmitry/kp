@@ -65,7 +65,7 @@
             this.Comparison_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Comparison_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Comparison_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Comparison_btn.Location = new System.Drawing.Point(376, 363);
+            this.Comparison_btn.Location = new System.Drawing.Point(376, 354);
             this.Comparison_btn.Name = "Comparison_btn";
             this.Comparison_btn.Size = new System.Drawing.Size(125, 32);
             this.Comparison_btn.TabIndex = 4;
@@ -76,7 +76,7 @@
             // Search
             // 
             this.Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Search.Location = new System.Drawing.Point(429, 78);
+            this.Search.Location = new System.Drawing.Point(428, 106);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(147, 26);
             this.Search.TabIndex = 5;
@@ -85,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(373, 81);
+            this.label1.Location = new System.Drawing.Point(372, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 19);
             this.label1.TabIndex = 6;
@@ -118,9 +118,9 @@
             // panel1
             // 
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel1.Location = new System.Drawing.Point(12, 41);
+            this.panel1.Location = new System.Drawing.Point(12, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(317, 397);
+            this.panel1.Size = new System.Drawing.Size(317, 371);
             this.panel1.TabIndex = 9;
             // 
             // Back_btn
@@ -141,11 +141,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(591, 22);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(242, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(21, 23);
             this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
+            this.label2.Text = "0";
             // 
             // Form2
             // 
@@ -164,8 +165,9 @@
             this.Controls.Add(this.sort_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
-            this.Text = "Список копалин";
+            this.Text = "Карта корисних копалин";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.MouseEnter += new System.EventHandler(this.Form2_MouseEnter);
             this.ResumeLayout(false);
             this.PerformLayout();

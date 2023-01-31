@@ -70,7 +70,7 @@
             this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.textBox1);
             this.Name = "Form6";
-            this.Text = "Інформація про розробників";
+            this.Text = "Карта корисних копалин";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form6_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

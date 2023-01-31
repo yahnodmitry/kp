@@ -22,6 +22,7 @@ namespace Kursovaya_test
         public Form3(Mineral min, string state)
         {
             InitializeComponent();
+           
             //form_2 = form2;
             state_n = state;
             this.min = min;
@@ -103,7 +104,7 @@ namespace Kursovaya_test
             this.Hide();
             //form_2.Show();
             Form2 form2 = new Form2(state_n);
-            
+            form2.Show();            
             
         }
 
@@ -119,6 +120,13 @@ namespace Kursovaya_test
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+           
+            label8.Text = min.Name + ". Статистика";
+           
         }
         //public Mineral mineral;
     }

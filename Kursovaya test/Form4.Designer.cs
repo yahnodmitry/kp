@@ -31,22 +31,23 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Back_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel1.Location = new System.Drawing.Point(13, 40);
+            this.panel1.Location = new System.Drawing.Point(13, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(278, 398);
+            this.panel1.Size = new System.Drawing.Size(278, 384);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel2.Location = new System.Drawing.Point(355, 40);
+            this.panel2.Location = new System.Drawing.Point(355, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(278, 398);
+            this.panel2.Size = new System.Drawing.Size(278, 384);
             this.panel2.TabIndex = 1;
             // 
             // Back_btn
@@ -64,19 +65,32 @@
             this.Back_btn.UseVisualStyleBackColor = false;
             this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(299, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "0";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form4";
             this.Text = "Порівняння";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form4_FormClosing);
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,5 +99,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Back_btn;
+        private System.Windows.Forms.Label label1;
     }
 }

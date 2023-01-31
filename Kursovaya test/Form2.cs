@@ -70,7 +70,7 @@ namespace Kursovaya_test
                 Label l = new Label();
                 l.Name = lst.find(i).data.Name;
                 l.Text = lst.find(i).data.Name;
-                l.Location = new Point(10, i * 22);
+                l.Location = new Point(10, i * 25);
                 l.Size = new Size(150, 20);
                 l.Click += label_Click;
                 this.Controls.Add(panel1);
@@ -99,7 +99,7 @@ namespace Kursovaya_test
             {
                 Form3 form3 = new Form3(m, state);
                 form3.Show();
-                this.Close();
+                this.Hide();
             }
 
         }
@@ -156,6 +156,11 @@ namespace Kursovaya_test
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            label2.Text = state + ". Cписок копалин";
         }
     }
 }
