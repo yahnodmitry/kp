@@ -170,44 +170,38 @@ namespace Kursovaya_test
             }
             size++;
         }
+
+        /// <summary>
+        /// строки 181 и 189 я немного изменил и добавил туда исключительные ситуации
+        /// </summary>
+        /// <param></param>
+        /// <returns></returns>
         public Node<T> find(int number)
         {
+            if (number < 0 || size <= number) return null; //исключительная ситуация 
             Node<T> temporary = head;
             for (int i = 0; i < number; i++)
-            {
                 temporary = temporary.next;
-                if (temporary == null)
-                    break;
-            }
-            if (temporary != null)
-                return temporary;
-            else
-                return null;
+            return temporary;
         }
         public void delete(int number)
         {
+            if (number < 0 || size <= number) return;     //исключительная ситуация 
             Node<T> temporary = head;
             for (int i = 0; i < number; i++)
-            {
-                temporary = temporary.next;
-                if (temporary == null)
-                    break;
-            }
-            if (temporary != null)
-            {
-                if (temporary.next != null)
-                    temporary.next.previous = temporary.previous;
-                else
-                    tail = temporary.previous;
-                if (temporary.previous != null)
-                    temporary.previous.next = temporary.next;
-                else
-                    head = temporary.next;
-                size--;
-            }
+               temporary = temporary.next;
+            if (temporary.next != null)
+                temporary.next.previous = temporary.previous;
+            else
+                tail = temporary.previous;
+            if (temporary.previous != null)
+                temporary.previous.next = temporary.next;
+            else
+                head = temporary.next;
+            size--;
         }
     }
-
+    
     public class BinaryHeap
     {
         private DoubleList<Mineral> list;
@@ -219,7 +213,7 @@ namespace Kursovaya_test
             }
         }
         public bool sortInc;
-
+        
         public void sortByIncome(DoubleList<Mineral> list)
         {
             sortInc = true;
