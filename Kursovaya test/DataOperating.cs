@@ -12,7 +12,8 @@ namespace Kursovaya_test
     public class DataOperating
     {
         public static string countryName;
-        public static void jsonDeserialization(DoubleList<Mineral> mineralList)
+        public static DoubleList<Mineral> list;
+        public static void jsonDeserialization(/*DoubleList<Mineral> mineralList*/)
         {
             try 
             {
@@ -26,7 +27,7 @@ namespace Kursovaya_test
                     newlist = (List<Mineral>)serializer.Deserialize(file, typeof(List<Mineral>));
                 }
                 for (int i = 0; i < newlist.Count; i++)
-                    mineralList.add(newlist[i]);
+                    list.add(newlist[i]);
             }
 
             catch(FileNotFoundException)
@@ -34,9 +35,13 @@ namespace Kursovaya_test
                 MessageBox.Show("Файл не знайдено");
             }
 
-            catch
+            catch(Newtonsoft.Json.JsonSerializationException)
             {
                 MessageBox.Show("Файл пошкоджено");
+            }
+            catch(NullReferenceException)
+            {
+                MessageBox.Show("ffadasdsd");
             }
 
         }
@@ -46,7 +51,7 @@ namespace Kursovaya_test
             try
             {
                 DoubleList<Yearly> yearlyList = null;
-                FileStream stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream("../../" + countryName + "yearly.sv", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
                 bool found = false;
                 string data;
@@ -126,7 +131,8 @@ namespace Kursovaya_test
             }
 
             catch(FileNotFoundException)
-            {   
+            {
+                list = null;
                 return null;
             }
 

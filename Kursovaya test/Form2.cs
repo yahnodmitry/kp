@@ -33,7 +33,8 @@ namespace Kursovaya_test
         private void testinput()
         {
             DataOperating.countryName = this.state;
-            DataOperating.jsonDeserialization(lst);
+            DataOperating.list = this.lst;
+            DataOperating.jsonDeserialization(/*lst*/);
             
             //minerals_list.Items.Add(lst.find(0));
 
