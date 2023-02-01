@@ -14,94 +14,127 @@ namespace Kursovaya_test
         public static string countryName;
         public static void jsonDeserialization(DoubleList<Mineral> mineralList)
         {
-            List<Mineral> newlist;
-            using (StreamReader file = File.OpenText("../../" + countryName + ".json"))
+            try 
             {
-                JsonSerializer serializer = new JsonSerializer
+                List<Mineral> newlist;
+                using (StreamReader file = File.OpenText("../../" + countryName + ".json"))
                 {
-                    TypeNameHandling = TypeNameHandling.Auto,
-                };
-                newlist = (List<Mineral>)serializer.Deserialize(file, typeof(List<Mineral>));
+                    JsonSerializer serializer = new JsonSerializer
+                    {
+                        TypeNameHandling = TypeNameHandling.Auto,
+                    };
+                    newlist = (List<Mineral>)serializer.Deserialize(file, typeof(List<Mineral>));
+                }
+                for (int i = 0; i < newlist.Count; i++)
+                    mineralList.add(newlist[i]);
             }
-            for (int i = 0; i < newlist.Count; i++)
-                mineralList.add(newlist[i]);
+
+            catch(FileNotFoundException)
+            {
+                MessageBox.Show("Файл не знайдено");
+            }
+
+            catch
+            {
+                MessageBox.Show("Файл пошкоджено");
+            }
+
         }
         public static DoubleList<Yearly> readFromCsv(string mineralName)
         {
-            DoubleList<Yearly> yearlyList = null;
-            FileStream stream = new FileStream("../../"+ countryName +"yearly.csv", FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(stream);
-            bool found = false;
-            string data;
-            do
+
+            try
             {
-                string[] cols = new string[1];
-                data = reader.ReadLine();
-                if(data != null)
-                    cols = data.Split(',');
-                if (cols[0] == mineralName)
-                {
-                    found = true;
-                    break;
-                }
-            } while (data != null);
-            if (found)
-            {
-                var cols = data.Split(',');
-                int year = int.Parse(cols[1]) - 1;
+                DoubleList<Yearly> yearlyList = null;
+                FileStream stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(stream);
+                bool found = false;
+                string data;
                 do
                 {
-
-                    if (int.Parse(cols[1]) == year + 1)
-                    {
-                        if(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0] == ',')
-                        {
-                            cols[2] = cols[2].Replace('.', ',');
-                            cols[3] = cols[3].Replace('.', ',');
-                            cols[4] = cols[4].Replace('.', ',');
-                        }
-                        Yearly nextYear = new Yearly
-                        {
-                            year = int.Parse(cols[1]),
-                            value = double.Parse(cols[2]),
-                            exp = double.Parse(cols[3]),
-                            income = double.Parse(cols[4])
-
-                        };
-                        if (yearlyList == null)
-                            yearlyList = new DoubleList<Yearly>();
-                        yearlyList.add(nextYear);
-                        year = int.Parse(cols[1]);
-                    }
-                    //else if (int.Parse(cols[1]) > year + 1)
-                    //{
-                    //    Yearly nextYear = new Yearly
-                    //    {
-                    //        year = year + 1,
-                    //        value = 0,
-                    //        income = 0,
-                    //        exp = 0
-                    //    };
-                    //    year++;
-                    //}
-                    else
-                    {
-                        MessageBox.Show("Сообщение");
-                        return null;
-                    }
+                    string[] cols = new string[1];
                     data = reader.ReadLine();
                     if (data != null)
                         cols = data.Split(',');
-                } while (cols[0] == mineralName && data != null);
+                    if (cols[0] == mineralName)
+                    {
+                        found = true;
+                        break;
+                    }
+                    else if (cols[0] == "")
+                    {
+                        throw new StringIsEmptyException();
+                    }   
+                } while (data != null);
+                if (found)
+                {
+                    var cols = data.Split(',');
+                    int year = int.Parse(cols[1]) - 1;
+                    do
+                    {
+
+                        if (int.Parse(cols[1]) == year + 1)
+                        {
+                            if (System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0] == ',')
+                            {
+                                cols[2] = cols[2].Replace('.', ',');
+                                cols[3] = cols[3].Replace('.', ',');
+                                cols[4] = cols[4].Replace('.', ',');
+                            }
+                            Yearly nextYear = new Yearly
+                            {
+                                year = int.Parse(cols[1]),
+                                value = double.Parse(cols[2]),
+                                exp = double.Parse(cols[3]),
+                                income = double.Parse(cols[4])
+
+                            };
+                            if (yearlyList == null)
+                                yearlyList = new DoubleList<Yearly>();
+                            yearlyList.add(nextYear);
+                            year = int.Parse(cols[1]);
+                        }
+                        //else if (int.Parse(cols[1]) > year + 1)
+                        //{
+                        //    Yearly nextYear = new Yearly
+                        //    {
+                        //        year = year + 1,
+                        //        value = 0,
+                        //        income = 0,
+                        //        exp = 0
+                        //    };
+                        //    year++;
+                        //}
+                        else
+                        {
+                            MessageBox.Show("Відсутня інформація") ;
+                            return null;
+                        }
+                        data = reader.ReadLine();
+                        if (data != null)
+                            cols = data.Split(',');
+                    } while (cols[0] == mineralName && data != null);
+                }
+                else
+                {
+                    MessageBox.Show("Такої руди в цій країні немає, будь ласка, введіть іншу.");
+                    return null;
+                }
+                reader.Close();
+                stream.Close();
+                return yearlyList;
             }
-            else
-            {
-                MessageBox.Show("Такої руди в цій країні немає, будь ласка, введіть іншу.");
+
+            catch(FileNotFoundException)
+            {   
                 return null;
             }
-            reader.Close();
-            stream.Close();
-            return yearlyList;
+
+            catch (StringIsEmptyException a)
+            {
+                MessageBox.Show(a.Message);
+                return null;
+            }
         }
         public static void write(string value, string exp, string income, DoubleList<Mineral> mineralList, Mineral mineral)
         {

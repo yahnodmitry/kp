@@ -24,15 +24,19 @@ namespace Kursovaya_test
             list = DataOperating.readFromCsv(name);
 
             double sumincome = 0, sumexp = 0;
-            Node<Yearly> temp = this.list.head;
-            do
+            if (this.list != null)
             {
-                sumincome += temp.data.income;
-                sumexp += temp.data.exp;
-                temp = temp.next;
-            } while (temp != null);
-            this.income = sumincome / this.list.size;
-            this.exp = sumexp / this.list.size;
+
+                Node<Yearly> temp = this.list.head;
+                do
+                {
+                    sumincome += temp.data.income;
+                    sumexp += temp.data.exp;
+                    temp = temp.next;
+                } while (temp != null);
+                this.income = sumincome / this.list.size;
+                this.exp = sumexp / this.list.size;
+            }
         }
         [JsonProperty]
         public string Name
