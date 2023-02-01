@@ -128,6 +128,11 @@ namespace Kursovaya_test
             label8.Text = min.Name + ". Статистика";
            
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataOperating.write()
+        }
         //public Mineral mineral;
     }
 

@@ -33,7 +33,8 @@ namespace Kursovaya_test
         private void testinput()
         {
             DataOperating.countryName = this.state;
-            DataOperating.jsonDeserialization(lst);
+            DataOperating.list = this.lst;
+            DataOperating.jsonDeserialization(/*lst*/);
             
             //minerals_list.Items.Add(lst.find(0));
 
@@ -64,21 +65,33 @@ namespace Kursovaya_test
             //this.Controls.Add(label3);
 
             //panel1.Controls.Add(label3);
-            for (int i = 0; i < lst.size; i++)
+            if(lst.size == 0)
             {
-
                 Label l = new Label();
-                l.Name = lst.find(i).data.Name;
-                l.Text = lst.find(i).data.Name;
-                l.Location = new Point(10, i * 25);
+                l.Name = "Error";
+                l.Text = "Помилка зчитування даних";
+                l.Location = new Point(10, 0);
                 l.Size = new Size(150, 20);
-                l.Click += label_Click;
                 this.Controls.Add(panel1);
                 panel1.Controls.Add(l);
-
             }
+            else
+            {
+                for (int i = 0; i < lst.size; i++)
+                {
 
+                    Label l = new Label();
+                    l.Name = lst.find(i).data.Name;
+                    l.Text = lst.find(i).data.Name;
+                    l.Location = new Point(10, i * 25);
+                    l.Size = new Size(150, 20);
+                    l.Click += label_Click;
+                    this.Controls.Add(panel1);
+                    panel1.Controls.Add(l);
 
+                }
+            }
+            
 
         }
         private void label_Click(object sender, EventArgs e)

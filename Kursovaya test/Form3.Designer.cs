@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -69,17 +69,17 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Bisque;
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(25, 84);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(250, 213);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -87,17 +87,17 @@
             // chart2
             // 
             this.chart2.BackColor = System.Drawing.Color.Bisque;
-            chartArea5.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart2.Legends.Add(legend5);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(281, 84);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart2.Series.Add(series5);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(250, 213);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
@@ -105,17 +105,17 @@
             // chart3
             // 
             this.chart3.BackColor = System.Drawing.Color.Bisque;
-            chartArea6.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart3.Legends.Add(legend6);
+            chartArea3.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart3.Legends.Add(legend3);
             this.chart3.Location = new System.Drawing.Point(537, 85);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart3.Series.Add(series6);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart3.Series.Add(series3);
             this.chart3.Size = new System.Drawing.Size(250, 213);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
@@ -126,7 +126,7 @@
             this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton1.Location = new System.Drawing.Point(19, 58);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(64, 23);
+            this.radioButton1.Size = new System.Drawing.Size(81, 26);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "За рік";
@@ -139,7 +139,7 @@
             this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton2.Location = new System.Drawing.Point(19, 103);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(138, 23);
+            this.radioButton2.Size = new System.Drawing.Size(178, 26);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "За декілька років";
@@ -152,7 +152,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(28, 515);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 19);
+            this.label1.Size = new System.Drawing.Size(25, 22);
             this.label1.TabIndex = 6;
             this.label1.Text = "   ";
             // 
@@ -162,7 +162,7 @@
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(176, 55);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.Size = new System.Drawing.Size(100, 30);
             this.textBox1.TabIndex = 7;
             // 
             // textBox2
@@ -171,7 +171,7 @@
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(176, 100);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.Size = new System.Drawing.Size(100, 30);
             this.textBox2.TabIndex = 8;
             // 
             // button1
@@ -195,7 +195,7 @@
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.Location = new System.Drawing.Point(114, 607);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
+            this.textBox3.Size = new System.Drawing.Size(100, 30);
             this.textBox3.TabIndex = 9;
             // 
             // textBox4
@@ -203,7 +203,7 @@
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.Location = new System.Drawing.Point(114, 688);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.Size = new System.Drawing.Size(100, 30);
             this.textBox4.TabIndex = 10;
             // 
             // textBox5
@@ -211,7 +211,7 @@
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox5.Location = new System.Drawing.Point(114, 649);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.Size = new System.Drawing.Size(100, 30);
             this.textBox5.TabIndex = 11;
             // 
             // label2
@@ -220,7 +220,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(28, 614);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 19);
+            this.label2.Size = new System.Drawing.Size(37, 22);
             this.label2.TabIndex = 12;
             this.label2.Text = "Рік";
             // 
@@ -230,7 +230,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(28, 656);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 19);
+            this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 13;
             this.label3.Text = "Ціна";
             // 
@@ -240,7 +240,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(28, 695);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(92, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "Прибуток";
             // 
@@ -258,6 +258,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "Записати";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -272,7 +273,7 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(28, 567);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 21);
+            this.label5.Size = new System.Drawing.Size(72, 27);
             this.label5.TabIndex = 17;
             this.label5.Text = "Запис";
             // 
@@ -282,7 +283,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(22, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(213, 21);
+            this.label6.Size = new System.Drawing.Size(268, 27);
             this.label6.TabIndex = 18;
             this.label6.Text = "Прогнозування прибутку";
             // 
@@ -292,7 +293,7 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(28, 53);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 21);
+            this.label7.Size = new System.Drawing.Size(128, 27);
             this.label7.TabIndex = 19;
             this.label7.Text = "Статистика";
             // 
@@ -332,7 +333,7 @@
             this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(305, 19);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 23);
+            this.label8.Size = new System.Drawing.Size(28, 31);
             this.label8.TabIndex = 22;
             this.label8.Text = "0";
             // 
