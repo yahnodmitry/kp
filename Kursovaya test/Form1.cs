@@ -54,7 +54,7 @@ namespace Kursovaya_test
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            string name = "Україна";
+            string name = "Ukraine";
             Form2 form2 = new Form2(name);
             //this.Hide();
             form2.Show();

@@ -77,7 +77,19 @@ namespace Kursovaya_test
             }
             else
             {
-                
+                for (int i = 0; i < lst.size; i++)
+                {
+
+                    Label l = new Label();
+                    l.Name = lst.find(i).data.Name;
+                    l.Text = lst.find(i).data.Name;
+                    l.Location = new Point(10, i * 25);
+                    l.Size = new Size(150, 20);
+                    l.Click += label_Click;
+                    this.Controls.Add(panel1);
+                    panel1.Controls.Add(l);
+
+                }
             }
             
 
@@ -153,10 +165,48 @@ namespace Kursovaya_test
             if(Profit_sort.Checked == true)
             {
                 sorting.sortByIncome(lst);
+                for (int i = 0; i < panel1.Controls.Count; i++)
+                {
+                    panel1.Controls[i].Enabled = false;
+                    panel1.Controls[i].Dispose();
+                    i--;
+                }
+                for (int i = 0; i < lst.size; i++)
+                {
+
+                    Label l = new Label();
+                    l.Name = lst.find(i).data.Name;
+                    l.Text = lst.find(i).data.Name;
+                    l.Location = new Point(10, i * 25);
+                    l.Size = new Size(150, 20);
+                    l.Click += label_Click;
+                    this.Controls.Add(panel1);
+                    panel1.Controls.Add(l);
+
+                }
             }
             else if(Export_sort.Checked == true)
             {
                 sorting.sortByExp(lst);
+                for (int i = 0; i < panel1.Controls.Count; i++)
+                {
+                    panel1.Controls[i].Enabled = false;
+                    panel1.Controls[i].Dispose();
+                    i--;
+                }
+                for (int i = 0; i < lst.size; i++)
+                {
+
+                    Label l = new Label();
+                    l.Name = lst.find(i).data.Name;
+                    l.Text = lst.find(i).data.Name;
+                    l.Location = new Point(10, i * 25);
+                    l.Size = new Size(150, 20);
+                    l.Click += label_Click;
+                    this.Controls.Add(panel1);
+                    panel1.Controls.Add(l);
+
+                }
             }
             else
             {
@@ -181,6 +231,17 @@ namespace Kursovaya_test
         private void Form2_Load(object sender, EventArgs e)
         {
             label2.Text = state + ". Cписок копалин";
+        }
+
+        private void Search_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < panel1.Controls.Count; i++)
+            {
+                panel1.Controls[i].Enabled = false;
+                panel1.Controls[i].Dispose();
+                i--;
+            }
+            output();
         }
     }
 }

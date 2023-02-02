@@ -80,6 +80,7 @@
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(147, 26);
             this.Search.TabIndex = 5;
+            this.Search.TextChanged += new System.EventHandler(this.Search_TextChanged);
             // 
             // label1
             // 
