@@ -36,35 +36,6 @@ namespace Kursovaya_test
             DataOperating.list = this.lst;
             DataOperating.jsonDeserialization(/*lst*/);
             
-            //minerals_list.Items.Add(lst.find(0));
-
-            //minerals_list.Items.Add(neft.Name);
-            //minerals_list.Items.Add(gas.Name);
-            //Label label1 = new Label()
-            //{
-            //    Text = ugol.Name,
-            //    Location = new Point(10, 10),
-            //    TabIndex = 11
-            //};
-            //Label label2 = new Label()
-            //{
-            //    Text = neft.Name,
-            //    Location = new Point(10, 20),
-            //    TabIndex = 12
-            //};
-            //Label label3 = new Label()
-            //{
-            //    Text = gas.Name,
-            //    Location = new Point(10, 30),
-            //    TabIndex = 13
-            //};
-            //this.Controls.Add(label1);
-            //panel1.Controls.Add(label1);
-            //this.Controls.Add(label2);
-            //panel1.Controls.Add(label2);
-            //this.Controls.Add(label3);
-
-            //panel1.Controls.Add(label3);
             if(lst.size == 0)
             {
                 Label l = new Label();
@@ -77,7 +48,7 @@ namespace Kursovaya_test
             }
             else
             {
-                
+                output();
             }
             
 
@@ -85,26 +56,46 @@ namespace Kursovaya_test
 
         private void output()
         {
+            int p = 0;
             for (int i = 0; i < lst.size; i++)
             {
 
-                if(lst.find(i).data.Name.Contains(Search.Text))
+                
+
+                if(Search.Text != "")
                 {
+                    if(!lst.find(i).data.Name.ToUpper().Contains(Search.Text.ToUpper()))
+                    {
+                        continue;
+                    }
+                }
+
                     Label l = new Label();
                     l.Name = lst.find(i).data.Name;
-                    l.Text = lst.find(i).data.Name;
-                    l.Location = new Point(10, i * 25);
-                    l.Size = new Size(150, 20);
+                    l.Text = lst.find(i).data.Name + '\n';
+                    if (lst.find(i).data.list != null)
+                    {
+                        l.Text += "Залишок: " + lst.find(i).data.Value.ToString("#.##") + ", "
+                        + "Ср. прибуток: " + lst.find(i).data.Income.ToString("#.##") + ", " +
+                        "Ср. експорт: " + lst.find(i).data.Exp.ToString("#.##");
+                    }
+                    else
+                    {
+                        l.Text += "Помилка при зчитуванні CSV файлу";
+                    }
+                    l.Location = new Point(10, p * 50);
+                //l.Size = new Size(150, 20);
+                    l.AutoSize = true;
                     l.Click += label_Click;
                     this.Controls.Add(panel1);
                     panel1.Controls.Add(l);
-                }  
+                    p++; 
             }
         }
         private void label_Click(object sender, EventArgs e)
         {
             Mineral m = null;
-            string name = (sender as Label).Text;
+            string name = (sender as Label).Text.Substring(0, (sender as Label).Text.IndexOf('\n'));
             Node<Mineral> temporary = lst.head;
             while (temporary != null)
             {
@@ -123,14 +114,7 @@ namespace Kursovaya_test
             }
 
         }
-        //private void label_Click(object sender, EventArgs e)
-        //{
-        //    for(int i = 0; i < 3; i++)
-        //    {
-        //        if(l )
-        //    }
-        //    Form3 form3 = new Form3
-        //}
+
 
         private void Comparison_btn_Click(object sender, EventArgs e)
         {
@@ -160,8 +144,10 @@ namespace Kursovaya_test
             }
             else
             {
-                //ошибка
+                MessageBox.Show("Оберіть критерій сортування");
             }
+            panel1.Controls.Clear();
+            output();
         }
 
         private void Form2_MouseEnter(object sender, EventArgs e)
@@ -181,6 +167,15 @@ namespace Kursovaya_test
         private void Form2_Load(object sender, EventArgs e)
         {
             label2.Text = state + ". Cписок копалин";
+        }
+
+        private void Search_TextChanged(object sender, EventArgs e)
+        {
+            if(lst.size != null)
+            {
+                panel1.Controls.Clear();
+                output();
+            }
         }
     }
 }

@@ -50,7 +50,7 @@
             this.sort_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.sort_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sort_button.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sort_button.Location = new System.Drawing.Point(376, 161);
+            this.sort_button.Location = new System.Drawing.Point(566, 163);
             this.sort_button.Name = "sort_button";
             this.sort_button.Size = new System.Drawing.Size(146, 32);
             this.sort_button.TabIndex = 1;
@@ -65,7 +65,7 @@
             this.Comparison_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Comparison_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Comparison_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Comparison_btn.Location = new System.Drawing.Point(376, 354);
+            this.Comparison_btn.Location = new System.Drawing.Point(566, 356);
             this.Comparison_btn.Name = "Comparison_btn";
             this.Comparison_btn.Size = new System.Drawing.Size(125, 32);
             this.Comparison_btn.TabIndex = 4;
@@ -76,16 +76,17 @@
             // Search
             // 
             this.Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Search.Location = new System.Drawing.Point(428, 106);
+            this.Search.Location = new System.Drawing.Point(618, 108);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(147, 26);
             this.Search.TabIndex = 5;
+            this.Search.TextChanged += new System.EventHandler(this.Search_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(372, 109);
+            this.label1.Location = new System.Drawing.Point(562, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 19);
             this.label1.TabIndex = 6;
@@ -95,7 +96,7 @@
             // 
             this.Profit_sort.AutoSize = true;
             this.Profit_sort.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Profit_sort.Location = new System.Drawing.Point(376, 199);
+            this.Profit_sort.Location = new System.Drawing.Point(566, 201);
             this.Profit_sort.Name = "Profit_sort";
             this.Profit_sort.Size = new System.Drawing.Size(200, 23);
             this.Profit_sort.TabIndex = 7;
@@ -107,7 +108,7 @@
             // 
             this.Export_sort.AutoSize = true;
             this.Export_sort.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Export_sort.Location = new System.Drawing.Point(376, 222);
+            this.Export_sort.Location = new System.Drawing.Point(566, 224);
             this.Export_sort.Name = "Export_sort";
             this.Export_sort.Size = new System.Drawing.Size(200, 23);
             this.Export_sort.TabIndex = 8;
@@ -120,7 +121,7 @@
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(12, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(317, 371);
+            this.panel1.Size = new System.Drawing.Size(544, 371);
             this.panel1.TabIndex = 9;
             // 
             // Back_btn

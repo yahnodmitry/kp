@@ -26,6 +26,8 @@ namespace Kursovaya_test
         Label exp2 = new Label();
         Label mineral1 = new Label();
         Label mineral2 = new Label();
+        Label value1 = new Label();
+        Label value2 = new Label();
         int count = 0;
         public Form4(DoubleList<Mineral> list, string state)
         {
@@ -86,15 +88,25 @@ namespace Kursovaya_test
                 mineral1.Text = m.Name;
                 mineral1.Location = new Point(12, 50);
                 mineral1.Font = new Font("Times New Roman", 12);
-                mineral1.Size = new Size(200, 22);
-                inc.Text = "Прибуток  : "+m.Income.ToString();
-                inc.Location = new Point(12, 90);
+                //mineral1.Size = new Size(200, 22);
+                mineral1.AutoSize = true;
+
+                value1.Text = "Залежі: " + m.Value.ToString("#.##");
+                value1.Location = new Point(12, 90);
+                value1.Font = new Font("Times New Roman", 12);
+                value1.AutoSize = true;
+
+                inc.Text = "Прибуток  : "+m.Income.ToString("#.##");
+                inc.Location = new Point(12, 120);
                 inc.Font = new Font("Times New Roman", 12);
-                inc.Size = new Size(200, 22);
-                exp.Text = "Ціна : "+ m.Exp.ToString();
-                exp.Location = new Point(12, 120);
+                //inc.Size = new Size(200, 22);
+                inc.AutoSize = true;
+                exp.Text = "Експорт : "+ m.Exp.ToString("#.##");
+                exp.Location = new Point(12, 150);
                 exp.Font = new Font("Times New Roman", 12);
-                exp.Size = new Size(200, 22);
+                exp.AutoSize = true;
+                //exp.Size = new Size(200, 22);
+                this.Controls.Add(value1);
                 this.Controls.Add(inc);
                 this.Controls.Add(exp);
                 this.Controls.Add(mineral1);
@@ -121,8 +133,8 @@ namespace Kursovaya_test
                 }
                 else if (income1 < income2)
                 {
-                    inc.ForeColor = Color.Green;
-                    inc2.ForeColor = Color.Red;
+                    inc.ForeColor = Color.Red;
+                    inc2.ForeColor = Color.Green;
                 }
 
             }    
@@ -151,15 +163,18 @@ namespace Kursovaya_test
                 mineral2.Text = m.Name;
                 mineral2.Location = new Point(390, 50);
                 mineral2.Font = new Font("Times New Roman", 12);
-                mineral2.Size = new Size(200, 22);
+                mineral2.AutoSize = true;
+                //mineral2.Size = new Size(200, 22);
                 inc2.Text ="Прибуток : "+ m.Income.ToString();
                 inc2.Location = new Point(390, 90);
                 inc2.Font = new Font("Times New Roman", 12);
-                inc2.Size = new Size(200, 22);
-                exp2.Text ="Ціна : "+ m.Exp.ToString();
+                //inc2.Size = new Size(200, 22);
+                inc2.AutoSize = true;
+                exp2.Text ="Експорт : "+ m.Exp.ToString();
                 exp2.Location = new Point(390, 120);
                 exp2.Font = new Font("Times New Roman", 12);
-                exp2.Size = new Size(200, 22);
+                exp2.AutoSize = true;
+                //exp2.Size = new Size(200, 22);
                 this.Controls.Add(inc2);
                 this.Controls.Add(exp2);
                 
@@ -187,8 +202,8 @@ namespace Kursovaya_test
                 }
                 else if (income1 < income2)
                 {
-                    inc.ForeColor = Color.Green;
-                    inc2.ForeColor = Color.Red;
+                    inc.ForeColor = Color.Red;
+                    inc2.ForeColor = Color.Green;
                 }
             }
 
