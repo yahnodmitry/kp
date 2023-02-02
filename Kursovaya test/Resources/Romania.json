@@ -1,0 +1,55 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Kursovaya_test.Mineral, Kursovaya test]], mscorlib",
+  "$values": [
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Барит",
+      "Value": 4170000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "ЗалізнаРуда",
+      "Value": 26000000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Золото",
+      "Value": 251.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Мідь",
+      "Value": 11000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Свинець",
+      "Value": 19000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Срібло",
+      "Value": 9950.0
+    }
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "МарганцеваРуда",
+      "Value": 895000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Вугілля",
+      "Value": 83000000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Цинк",
+      "Value": 1115000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "УрановаРуда",
+      "Value": 98000.0
+    }
+  ]
+}

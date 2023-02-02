@@ -1,0 +1,65 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Kursovaya_test.Mineral, Kursovaya test]], mscorlib",
+  "$values": [
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Вугілля",
+      "Value": 33000000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "ЗалізнаРуда",
+      "Value": 28000000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Графіт",
+      "Value": 700000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Каолін",
+      "Value": 590000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Гравій",
+      "Value": 1850000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "МарганцеваРуда",
+      "Value": 110000000.0
+    }
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "ІльменітоваРуда",
+      "Value": 16000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "УрановаРуда",
+      "Value": 120000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "Глина",
+      "Value": 7700000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
+      "Name": "КухоннаСіль",
+      "Value": 960000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Liquid, Kursovaya test",
+      "Name": "Нафта",
+      "Value": 8400000000.0
+    },
+    {
+      "$type": "Kursovaya_test.Gas Kursovaya test",
+      "Name": "Газ",
+      "Value": 37000000000.0
+    }
+  ]
+}
