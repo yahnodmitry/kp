@@ -37,7 +37,7 @@
       "Value": 340000000.0
     },
     {
-      "$type": "Kursovaya_test.Solid Kursovaya test",
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
       "Name": "МарганцеваРуда",
       "Value": 395000000.0
     },

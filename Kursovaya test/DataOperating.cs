@@ -35,10 +35,10 @@ namespace Kursovaya_test
                 MessageBox.Show("Файл JSON не знайдено");
             }
 
-            catch(Newtonsoft.Json.JsonSerializationException)
-            {
-                MessageBox.Show("Неправильний тип у файлі JSON");
-            }
+            //catch(Newtonsoft.Json.JsonSerializationException)
+            //{
+            //    MessageBox.Show("Неправильний тип у файлі JSON");
+            //}
             catch(NullReferenceException)
             {
                 MessageBox.Show("Файл CSV не знайдено");

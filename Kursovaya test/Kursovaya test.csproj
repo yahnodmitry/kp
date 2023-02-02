@@ -111,6 +111,44 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Austria.json" />
+    <None Include="Austriayearly.csv" />
+    <None Include="Britain.json" />
+    <None Include="Britainyearly.csv" />
+    <None Include="France.json" />
+    <None Include="Franceyearly.csv" />
+    <None Include="Germany.json" />
+    <None Include="Germanyyearly.csv" />
+    <None Include="Hungary.json" />
+    <None Include="Hungaryyearly.csv" />
+    <None Include="Italy.json" />
+    <None Include="Italyyearly.csv" />
+    <None Include="Poland.json" />
+    <None Include="Polandyearly.csv" />
+    <None Include="Resources\Austria.json" />
+    <None Include="Resources\Austriayearly.csv" />
+    <None Include="Resources\Britain.json" />
+    <None Include="Resources\Britainyearly.csv" />
+    <None Include="Resources\France.json" />
+    <None Include="Resources\Franceyearly.csv" />
+    <None Include="Resources\Germany.json" />
+    <None Include="Resources\Germanyyearly.csv" />
+    <None Include="Resources\Hungary.json" />
+    <None Include="Resources\Hungaryyearly.csv" />
+    <None Include="Resources\Italy.json" />
+    <None Include="Resources\Italyyearly.csv" />
+    <None Include="Resources\Poland.json" />
+    <None Include="Resources\Polandyearly.csv" />
+    <None Include="Resources\Romania.json" />
+    <None Include="Resources\Romaniayearly.csv" />
+    <None Include="Resources\Spain.json" />
+    <None Include="Resources\Spainyearly.csv" />
+    <None Include="Resources\Ukraine.json" />
+    <None Include="Resources\Ukraineyearly.csv" />
+    <None Include="Romania.json" />
+    <None Include="Romaniayearly.csv" />
+    <None Include="Spain.json" />
+    <None Include="Spainyearly.csv" />
     <None Include="Ukraine.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -135,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_i.png" />
+    <Content Include="icon_i.png" />
+    <Content Include="map_ukr.png" />
+    <Content Include="png-transparent-ukraine-map-map-vector-map-area.png" />
     <Content Include="saves.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

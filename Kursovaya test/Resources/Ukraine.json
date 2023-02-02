@@ -30,7 +30,7 @@
       "$type": "Kursovaya_test.Solid, Kursovaya test",
       "Name": "МарганцеваРуда",
       "Value": 110000000.0
-    }
+    },
     {
       "$type": "Kursovaya_test.Solid, Kursovaya test",
       "Name": "ІльменітоваРуда",
@@ -57,7 +57,7 @@
       "Value": 8400000000.0
     },
     {
-      "$type": "Kursovaya_test.Gas Kursovaya test",
+      "$type": "Kursovaya_test.Gas, Kursovaya test",
       "Name": "Газ",
       "Value": 37000000000.0
     }

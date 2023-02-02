@@ -37,7 +37,7 @@
       "Value": 23900000000.0
     },
     {
-      "$type": "Kursovaya_test.Solid Kursovaya test",
+      "$type": "Kursovaya_test.Solid, Kursovaya test",
       "Name": "Золото",
       "Value": 347.0
     },

@@ -30,7 +30,7 @@
       "$type": "Kursovaya_test.Liquid, Kursovaya test",
       "Name": "Нафта",
       "Value": 24000000.0
-    }
+    },
     {
       "$type": "Kursovaya_test.Gas, Kursovaya test",
       "Name": "Газ",
