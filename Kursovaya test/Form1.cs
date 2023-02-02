@@ -64,42 +64,74 @@ namespace Kursovaya_test
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 2");
+            string name = "Poland";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 3");
+            string name = "France";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 4");
+            string name = "Germany";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 5");
+            string name = "Italy";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 6");
+            string name = "Romania";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 7");
+            string name = "Spain";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 8");
+            string name = "Britain";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }   
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 9");
+            string name = "Hungary";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         
@@ -125,7 +157,11 @@ namespace Kursovaya_test
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Information 10");
+            string name = "Austria";
+            Form2 form2 = new Form2(name);
+            //this.Hide();
+            form2.Show();
+            this.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)

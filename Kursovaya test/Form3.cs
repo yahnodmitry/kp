@@ -16,16 +16,18 @@ namespace Kursovaya_test
         double avalue;
         double aprice;
         string state_n;
+        DoubleList<Mineral> list;
         //Form2 form_2;
         int enter = 0;
 
-        public Form3(Mineral min, string state)
+        public Form3(Mineral min, string state, DoubleList<Mineral> list)
         {
             InitializeComponent();
            
             //form_2 = form2;
             state_n = state;
             this.min = min;
+            this.list = list;
             Node<Yearly> temp = min.list.head;
             double sumvalue = 0, sumprice = 0;
             while (temp != null)
@@ -39,7 +41,7 @@ namespace Kursovaya_test
             }
             this.avalue = sumvalue/min.list.size;
             this.aprice = sumprice / min.list.size;
-
+            label5.Text += " за" + (min.list.tail.data.year + 1).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -131,9 +133,10 @@ namespace Kursovaya_test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //DataOperating.write()
+            
+            DataOperating.write(textBox3.Text, textBox4.Text, textBox5.Text, list, min);
         }
-        //public Mineral mineral;
+
     }
 
    

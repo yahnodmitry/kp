@@ -20,6 +20,10 @@ namespace Kursovaya_test
         double income1;
         double price2;
         double income2;
+        double val1, val2;
+
+        Type t1;
+        Type t2; 
         Label inc = new Label();
         Label exp = new Label();
         Label inc2 = new Label();
@@ -91,28 +95,43 @@ namespace Kursovaya_test
                 //mineral1.Size = new Size(200, 22);
                 mineral1.AutoSize = true;
 
-                value1.Text = "Залежі: " + m.Value.ToString("#.##");
-                value1.Location = new Point(12, 90);
-                value1.Font = new Font("Times New Roman", 12);
-                value1.AutoSize = true;
+                if(m.list == null)
+                {
+                    count--;
+                    value1.Text = "Залежі: " + m.Value.ToString("#.##");
+                    value1.Location = new Point(12, 90);
+                    value1.Font = new Font("Times New Roman", 12);
+                    value1.AutoSize = true;
+                    this.Controls.Add(value1);
+                }
+                else
+                {
+                    value1.Text = "Залежі: " + m.Value.ToString("#.##");
+                    value1.Location = new Point(12, 90);
+                    value1.Font = new Font("Times New Roman", 12);
+                    value1.AutoSize = true;
 
-                inc.Text = "Прибуток  : "+m.Income.ToString("#.##");
-                inc.Location = new Point(12, 120);
-                inc.Font = new Font("Times New Roman", 12);
-                //inc.Size = new Size(200, 22);
-                inc.AutoSize = true;
-                exp.Text = "Експорт : "+ m.Exp.ToString("#.##");
-                exp.Location = new Point(12, 150);
-                exp.Font = new Font("Times New Roman", 12);
-                exp.AutoSize = true;
-                //exp.Size = new Size(200, 22);
-                this.Controls.Add(value1);
-                this.Controls.Add(inc);
-                this.Controls.Add(exp);
-                this.Controls.Add(mineral1);
-                price1 = m.Exp;
-                income1 = m.Income;
-                
+                    inc.Text = "Прибуток  : " + m.Income.ToString("#.##");
+                    inc.Location = new Point(12, 120);
+                    inc.Font = new Font("Times New Roman", 12);
+                    //inc.Size = new Size(200, 22);
+                    inc.AutoSize = true;
+                    exp.Text = "Експорт : " + m.Exp.ToString("#.##");
+                    exp.Location = new Point(12, 150);
+                    exp.Font = new Font("Times New Roman", 12);
+                    exp.AutoSize = true;
+
+                    t1 = m.GetType();
+
+                    //exp.Size = new Size(200, 22);
+                    this.Controls.Add(value1);
+                    this.Controls.Add(inc);
+                    this.Controls.Add(exp);
+                    this.Controls.Add(mineral1);
+                    price1 = m.Exp;
+                    income1 = m.Income;
+                    val1 = m.Value;
+                }  
             }
             if(count ==2)
             {
@@ -136,7 +155,23 @@ namespace Kursovaya_test
                     inc.ForeColor = Color.Red;
                     inc2.ForeColor = Color.Green;
                 }
-
+                if (t1 != t2)
+                {
+                    value1.ForeColor = value2.ForeColor = Color.Gray;
+                }
+                else
+                {
+                    if (val1 > val2)
+                    {
+                        value1.ForeColor = Color.Green;
+                        value2.ForeColor = Color.Red;
+                    }
+                    else if (val1 < val2)
+                    {
+                        value1.ForeColor = Color.Red;
+                        value2.ForeColor = Color.Green;
+                    }
+                }
             }    
 
             
@@ -164,23 +199,46 @@ namespace Kursovaya_test
                 mineral2.Location = new Point(390, 50);
                 mineral2.Font = new Font("Times New Roman", 12);
                 mineral2.AutoSize = true;
-                //mineral2.Size = new Size(200, 22);
-                inc2.Text ="Прибуток : "+ m.Income.ToString();
-                inc2.Location = new Point(390, 90);
-                inc2.Font = new Font("Times New Roman", 12);
-                //inc2.Size = new Size(200, 22);
-                inc2.AutoSize = true;
-                exp2.Text ="Експорт : "+ m.Exp.ToString();
-                exp2.Location = new Point(390, 120);
-                exp2.Font = new Font("Times New Roman", 12);
-                exp2.AutoSize = true;
-                //exp2.Size = new Size(200, 22);
-                this.Controls.Add(inc2);
-                this.Controls.Add(exp2);
+
+                if(m.list == null)
+                {
+                    count--;
+                    value2.Text = "Помилка при зчитуванні CSV файлу";
+                    value2.Location = new Point(390, 90);
+                    value2.Font = new Font("Times New Roman", 12);
+                    value2.AutoSize = true;
+                    this.Controls.Add(value2);
+                }
+
+                else
+                {
+                    value2.Text = "Залежі: " + m.Value.ToString("#.##");
+                    value2.Location = new Point(390, 90);
+                    value2.Font = new Font("Times New Roman", 12);
+                    value2.AutoSize = true;
+
+                    //mineral2.Size = new Size(200, 22);
+                    inc2.Text = "Прибуток : " + m.Income.ToString();
+                    inc2.Location = new Point(390, 120);
+                    inc2.Font = new Font("Times New Roman", 12);
+                    //inc2.Size = new Size(200, 22);
+                    inc2.AutoSize = true;
+                    exp2.Text = "Експорт : " + m.Exp.ToString();
+                    exp2.Location = new Point(390, 150);
+                    exp2.Font = new Font("Times New Roman", 12);
+                    exp2.AutoSize = true;
+
+                    t2 = m.GetType();
+                    //exp2.Size = new Size(200, 22);
+                    this.Controls.Add(inc2);
+                    this.Controls.Add(exp2);
+                    this.Controls.Add(value2);
+                    this.Controls.Add(mineral2);
+                    price2 = m.Exp;
+                    income2 = m.Income;
+                    val2 = m.Value;
+                }
                 
-                this.Controls.Add(mineral2);
-                price2 = m.Exp;
-                income2 = m.Income;
 
             }
             if (count == 2)
@@ -204,6 +262,23 @@ namespace Kursovaya_test
                 {
                     inc.ForeColor = Color.Red;
                     inc2.ForeColor = Color.Green;
+                }
+                if(t1 != t2)
+                {
+                    value1.ForeColor = value2.ForeColor = Color.Gray;
+                }
+                else
+                {
+                    if (val1 > val2)
+                    {
+                        value1.ForeColor = Color.Green;
+                        value2.ForeColor = Color.Red;
+                    }
+                    else if (val1 < val2)
+                    {
+                        value1.ForeColor = Color.Red;
+                        value2.ForeColor = Color.Green;
+                    }
                 }
             }
 

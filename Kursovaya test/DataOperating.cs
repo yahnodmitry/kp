@@ -18,7 +18,7 @@ namespace Kursovaya_test
             try 
             {
                 List<Mineral> newlist;
-                using (StreamReader file = File.OpenText("../../" + countryName + ".json"))
+                using (StreamReader file = File.OpenText("../../Resources/" + countryName + ".json"))
                 {
                     JsonSerializer serializer = new JsonSerializer
                     {
@@ -51,7 +51,7 @@ namespace Kursovaya_test
             try
             {
                 DoubleList<Yearly> yearlyList = new DoubleList<Yearly>();
-                FileStream stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream("../../Resources/" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
                 try
                 { 
@@ -175,23 +175,24 @@ namespace Kursovaya_test
                 while (temp != null)
                 {
                     newlist.Add(temp.data);
+                    temp = temp.next;
                 }
 
-                using (FileStream file = File.Open("../../" + countryName + ".json", FileMode.Open))
+                using (StreamWriter file = File.CreateText("../../Resources/" + countryName + ".json"))
                 {
-                    StreamWriter write = new StreamWriter(file);
+                    //StreamWriter write = new StreamWriter(file);
                     JsonSerializer serializer = new JsonSerializer
                     {
                         TypeNameHandling = TypeNameHandling.All,
                         Formatting = Formatting.Indented
                     };
-                    serializer.Serialize(write, newlist);
+                    serializer.Serialize(file, newlist);
                 }
 
                 string half1 = "";
                 string half2 = "";
                 string currentline = "";
-                FileStream stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
+                FileStream stream = new FileStream("../../Resources/" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
                 StreamReader reader = new StreamReader(stream);
                 currentline = "";
                 string[] cols1 = new String[1];
@@ -220,7 +221,7 @@ namespace Kursovaya_test
                     value + ',' +
                     exp + ',' +
                     income;
-                stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Write);
+                stream = new FileStream("../../Resources/" + countryName + "yearly.csv", FileMode.Open, FileAccess.Write);
                 StreamWriter writer = new StreamWriter(stream);
                 //string full = half1 + newdata;
                 //if (half2 != "")

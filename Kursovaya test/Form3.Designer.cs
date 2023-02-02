@@ -193,7 +193,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(114, 607);
+            this.textBox3.Location = new System.Drawing.Point(148, 614);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 30);
             this.textBox3.TabIndex = 9;
@@ -201,7 +201,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(114, 688);
+            this.textBox4.Location = new System.Drawing.Point(148, 653);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 30);
             this.textBox4.TabIndex = 10;
@@ -209,7 +209,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(114, 649);
+            this.textBox5.Location = new System.Drawing.Point(148, 692);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 30);
             this.textBox5.TabIndex = 11;
@@ -220,9 +220,9 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(28, 614);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 22);
+            this.label2.Size = new System.Drawing.Size(91, 22);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Рік";
+            this.label2.Text = "Видобуто";
             // 
             // label3
             // 
@@ -230,9 +230,9 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(28, 656);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 22);
+            this.label3.Size = new System.Drawing.Size(92, 22);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Ціна";
+            this.label3.Text = "Прибуток";
             // 
             // label4
             // 
@@ -240,9 +240,9 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(28, 695);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 22);
+            this.label4.Size = new System.Drawing.Size(81, 22);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Прибуток";
+            this.label4.Text = "Експорт";
             // 
             // button2
             // 
@@ -342,7 +342,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(871, 493);
+            this.ClientSize = new System.Drawing.Size(892, 493);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Back_btn);

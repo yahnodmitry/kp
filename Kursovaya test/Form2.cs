@@ -59,9 +59,6 @@ namespace Kursovaya_test
             int p = 0;
             for (int i = 0; i < lst.size; i++)
             {
-
-                
-
                 if(Search.Text != "")
                 {
                     if(!lst.find(i).data.Name.ToUpper().Contains(Search.Text.ToUpper()))
@@ -78,15 +75,14 @@ namespace Kursovaya_test
                         l.Text += "Залишок: " + lst.find(i).data.Value.ToString("#.##") + ", "
                         + "Ср. прибуток: " + lst.find(i).data.Income.ToString("#.##") + ", " +
                         "Ср. експорт: " + lst.find(i).data.Exp.ToString("#.##");
+                        l.Click += label_Click;
                     }
                     else
                     {
                         l.Text += "Помилка при зчитуванні CSV файлу";
                     }
                     l.Location = new Point(10, p * 50);
-                //l.Size = new Size(150, 20);
-                    l.AutoSize = true;
-                    l.Click += label_Click;
+                    l.AutoSize = true;   
                     this.Controls.Add(panel1);
                     panel1.Controls.Add(l);
                     p++; 
@@ -108,7 +104,7 @@ namespace Kursovaya_test
             }
             if (m != null)
             {
-                Form3 form3 = new Form3(m, state);
+                Form3 form3 = new Form3(m, state, lst);
                 form3.Show();
                 this.Hide();
             }
@@ -171,7 +167,7 @@ namespace Kursovaya_test
 
         private void Search_TextChanged(object sender, EventArgs e)
         {
-            if(lst.size != null)
+            if(lst.size != 0)
             {
                 panel1.Controls.Clear();
                 output();
