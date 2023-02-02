@@ -32,16 +32,16 @@ namespace Kursovaya_test
 
             catch(FileNotFoundException)
             {
-                MessageBox.Show("Файл не знайдено");
+                MessageBox.Show("Файл JSON не знайдено");
             }
 
             catch(Newtonsoft.Json.JsonSerializationException)
             {
-                MessageBox.Show("Файл пошкоджено");
+                MessageBox.Show("Неправильний тип у файлі JSON");
             }
             catch(NullReferenceException)
             {
-                MessageBox.Show("ffadasdsd");
+                MessageBox.Show("Файл CSV не знайдено");
             }
 
         }
@@ -52,9 +52,9 @@ namespace Kursovaya_test
             {
                 DoubleList<Yearly> yearlyList = new DoubleList<Yearly>();
                 FileStream stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(stream);
                 try
-                {
-                    StreamReader reader = new StreamReader(stream);
+                { 
                     bool found = false;
                     string data;
                     do
@@ -122,6 +122,10 @@ namespace Kursovaya_test
                 {
                     return null;
                 }
+                finally
+                {
+                    reader.Close();
+                }
                
                 stream.Close();
                 return yearlyList;
@@ -141,73 +145,100 @@ namespace Kursovaya_test
         }
         public static void write(string value, string exp, string income, DoubleList<Mineral> mineralList, Mineral mineral)
         {
-            int year = mineral.list.tail.data.year + 1;
-            mineral.Value -= double.Parse(value);
+            double v=0, e=0, i=0;
 
-            List<Mineral> newlist = new List<Mineral>();
-            Node<Mineral> temp = mineralList.head;
-            while(temp != null)
+            try
             {
-                newlist.Add(temp.data);
-            }
-
-            using (FileStream file = File.Open("../../" + countryName + ".json", FileMode.Open))
-            {
-                StreamWriter write = new StreamWriter(file);
-                JsonSerializer serializer = new JsonSerializer
+                if (System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0] == ',')
                 {
-                    TypeNameHandling = TypeNameHandling.All,
-                    Formatting = Formatting.Indented
-                };
-                serializer.Serialize(write, newlist);
-            }
+                    value.Replace('.', ',');
+                    exp.Replace('.', ',');
+                    income.Replace('.', ',');
+                }
+                else
+                {
+                    value.Replace(',', '.');
+                    exp.Replace(',', '.');
+                    income.Replace(',', '.');
+                }
+                if (!double.TryParse(value, out v) || !double.TryParse(exp, out e) || !double.TryParse(income, out i))
+                {
+                    throw new WrongFormatException();
+                }
 
-            string half1 = "";
-            string half2 = "";
-            string currentline = "";
-            FileStream stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(stream);
-            currentline = "";
-            string[] cols1 = new String[1];
-            while ((cols1[0] != newlist[0].Name || int.Parse(cols1[1]) != newlist[0].list.tail.data.year) && currentline != null)
+
+                int year = mineral.list.tail.data.year + 1;
+                mineral.Value -= v;
+
+                List<Mineral> newlist = new List<Mineral>();
+                Node<Mineral> temp = mineralList.head;
+                while (temp != null)
+                {
+                    newlist.Add(temp.data);
+                }
+
+                using (FileStream file = File.Open("../../" + countryName + ".json", FileMode.Open))
+                {
+                    StreamWriter write = new StreamWriter(file);
+                    JsonSerializer serializer = new JsonSerializer
+                    {
+                        TypeNameHandling = TypeNameHandling.All,
+                        Formatting = Formatting.Indented
+                    };
+                    serializer.Serialize(write, newlist);
+                }
+
+                string half1 = "";
+                string half2 = "";
+                string currentline = "";
+                FileStream stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(stream);
+                currentline = "";
+                string[] cols1 = new String[1];
+                while ((cols1[0] != newlist[0].Name || int.Parse(cols1[1]) != newlist[0].list.tail.data.year) && currentline != null)
+                {
+                    currentline = reader.ReadLine();
+                    cols1 = currentline.Split(',');
+                    half1 += currentline + '\n';
+                }
+                half1.Remove(half1.Length - 2, 1);
+                half2 = reader.ReadToEnd();
+                half2.Remove(0, 1);
+                half2.Remove(half2.Length - 2, 1);
+                reader.Close();
+                stream.Close();
+
+                if (System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0] == ',')
+                {
+                    value = value.Replace(',', '.');
+                    exp = exp.Replace(',', '.');
+                    income = income.Replace(',', '.');
+                }
+
+                string newdata = newlist[0].Name + ',' +
+                    year.ToString() + ',' +
+                    value + ',' +
+                    exp + ',' +
+                    income;
+                stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(stream);
+                //string full = half1 + newdata;
+                //if (half2 != "")
+                //    full += half2;
+
+                writer.Write(half1);
+                writer.Write(newdata);
+                if (half2 != "")
+                    writer.Write('\n' + half2);
+                //writer.Write(full);
+                writer.Flush();
+                writer.Close();
+                stream.Close();
+            }
+            catch(WrongFormatException)
             {
-                currentline = reader.ReadLine();
-                cols1 = currentline.Split(',');
-                half1 += currentline + '\n';
-            }
-            half1.Remove(half1.Length - 2, 1);
-            half2 = reader.ReadToEnd();
-            half2.Remove(0, 1);
-            half2.Remove(half2.Length - 2, 1);
-            reader.Close();
-            stream.Close();
-
-            if(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0] == ',')
-            {
-                value = value.Replace(',', '.');
-                exp = exp.Replace(',', '.');
-                income = income.Replace(',', '.');
-            }
-
-            string newdata = newlist[0].Name + ',' +
-                year.ToString() + ',' +
-                value + ',' +
-                exp + ',' +
-                income;
-            stream = new FileStream("../../" + countryName + "yearly.csv", FileMode.Open, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(stream);
-            //string full = half1 + newdata;
-            //if (half2 != "")
-            //    full += half2;
-
-            writer.Write(half1);
-            writer.Write(newdata);
-            if (half2 != "")
-                writer.Write('\n' + half2);
-            //writer.Write(full);
-            writer.Flush();
-            writer.Close();
-            stream.Close();
+                MessageBox.Show("Неправильний формат даних");
+            }     
         }
     }
 }

@@ -19,6 +19,11 @@ namespace Kursovaya_test
         //static string StandartMessage = "Зчитана строка порожня";
         //public MineralNotFoundException(string message) : base(message) { }
     }
+    public class WrongFormatException : Exception
+    {
+        public WrongFormatException() : base() { }
+    }
+
 
 
 }
