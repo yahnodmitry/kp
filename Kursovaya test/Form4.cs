@@ -45,7 +45,8 @@ namespace Kursovaya_test
         private void testinput()
         {
             
-            for (int i = 0; i < 3; i++)
+            
+            for (int i = 0; i < list.size; i++)
             {
 
                 Label l = new Label();

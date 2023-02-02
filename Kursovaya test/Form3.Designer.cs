@@ -78,7 +78,7 @@
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Видобуток";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(250, 213);
             this.chart1.TabIndex = 0;
@@ -96,7 +96,7 @@
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Прибуток";
             this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(250, 213);
             this.chart2.TabIndex = 1;
@@ -114,7 +114,7 @@
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
-            series3.Name = "Series1";
+            series3.Name = "Експорт";
             this.chart3.Series.Add(series3);
             this.chart3.Size = new System.Drawing.Size(250, 213);
             this.chart3.TabIndex = 2;
