@@ -60,7 +60,6 @@ namespace Kursovaya_test
     }
     public class Solid : Mineral
     {
-        static private string measure = "";
         public Solid(/*DoubleList<Yearly> list = null, */string name = "", double value = 0)
             : base(/*list,*/ name, value)
         {
@@ -70,7 +69,6 @@ namespace Kursovaya_test
 
     public class Liquid : Mineral
     {
-        static private string measure = "";
         public Liquid(/*DoubleList<Yearly> list = null, */string name = "", double value = 0)
             : base(/*list, */name, value)
         {
@@ -80,7 +78,6 @@ namespace Kursovaya_test
 
     public class Gas : Mineral 
     {
-        static private string measure = "";
         public Gas(/*DoubleList<Yearly> list = null,*/ string name = "", double value = 0)
             : base(/*list,*/ name, value)
         {

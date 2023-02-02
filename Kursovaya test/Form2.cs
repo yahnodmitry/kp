@@ -77,9 +77,19 @@ namespace Kursovaya_test
             }
             else
             {
-                for (int i = 0; i < lst.size; i++)
-                {
+                
+            }
+            
 
+        }
+
+        private void output()
+        {
+            for (int i = 0; i < lst.size; i++)
+            {
+
+                if(lst.find(i).data.Name.Contains(Search.Text))
+                {
                     Label l = new Label();
                     l.Name = lst.find(i).data.Name;
                     l.Text = lst.find(i).data.Name;
@@ -88,11 +98,8 @@ namespace Kursovaya_test
                     l.Click += label_Click;
                     this.Controls.Add(panel1);
                     panel1.Controls.Add(l);
-
-                }
+                }  
             }
-            
-
         }
         private void label_Click(object sender, EventArgs e)
         {

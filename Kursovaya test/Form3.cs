@@ -131,7 +131,7 @@ namespace Kursovaya_test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DataOperating.write()
+            //DataOperating.write()
         }
         //public Mineral mineral;
     }
