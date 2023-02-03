@@ -14,7 +14,6 @@ namespace Kursovaya_test
     public partial class Form4 : Form
     {
         DoubleList<Mineral> list;
-        //Form2 form_2;
         string state_n;
         double price1;
         double income1;
@@ -36,7 +35,6 @@ namespace Kursovaya_test
         public Form4(DoubleList<Mineral> list, string state)
         {
             this.list = list;
-            //form_2= form2;
             state_n = state;
             InitializeComponent();
             
@@ -69,8 +67,6 @@ namespace Kursovaya_test
                 panel2.Controls.Add(l2);
 
             }
-            //this.Controls.Add(panel1);
-            //this.Controls.Add(panel2);
         }
         private void label_Click(object sender, EventArgs e)
         {
@@ -93,7 +89,6 @@ namespace Kursovaya_test
                 mineral1.Text = m.Name;
                 mineral1.Location = new Point(12, 50);
                 mineral1.Font = new Font("Times New Roman", 12);
-                //mineral1.Size = new Size(200, 22);
                 mineral1.AutoSize = true;
 
                 if(m.list == null)
@@ -115,7 +110,6 @@ namespace Kursovaya_test
                     inc.Text = "Прибуток  : " + m.Income.ToString("#.##");
                     inc.Location = new Point(12, 120);
                     inc.Font = new Font("Times New Roman", 12);
-                    //inc.Size = new Size(200, 22);
                     inc.AutoSize = true;
                     exp.Text = "Експорт : " + m.Exp.ToString("#.##");
                     exp.Location = new Point(12, 150);
@@ -123,8 +117,6 @@ namespace Kursovaya_test
                     exp.AutoSize = true;
 
                     t1 = m.GetType();
-
-                    //exp.Size = new Size(200, 22);
                     this.Controls.Add(value1);
                     this.Controls.Add(inc);
                     this.Controls.Add(exp);
@@ -217,20 +209,15 @@ namespace Kursovaya_test
                     value2.Location = new Point(390, 90);
                     value2.Font = new Font("Times New Roman", 12);
                     value2.AutoSize = true;
-
-                    //mineral2.Size = new Size(200, 22);
                     inc2.Text = "Прибуток : " + m.Income.ToString();
                     inc2.Location = new Point(390, 120);
                     inc2.Font = new Font("Times New Roman", 12);
-                    //inc2.Size = new Size(200, 22);
                     inc2.AutoSize = true;
                     exp2.Text = "Експорт : " + m.Exp.ToString();
                     exp2.Location = new Point(390, 150);
                     exp2.Font = new Font("Times New Roman", 12);
                     exp2.AutoSize = true;
-
                     t2 = m.GetType();
-                    //exp2.Size = new Size(200, 22);
                     this.Controls.Add(inc2);
                     this.Controls.Add(exp2);
                     this.Controls.Add(value2);
@@ -290,7 +277,6 @@ namespace Kursovaya_test
         {
             
             this.Hide();
-            //form_2.Show();
             Form2 form2 = new Form2(state_n);
             form2.Show();
             

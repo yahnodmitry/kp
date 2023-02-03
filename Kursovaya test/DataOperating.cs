@@ -13,7 +13,7 @@ namespace Kursovaya_test
     {
         public static string countryName;
         public static DoubleList<Mineral> list;
-        public static void jsonDeserialization(/*DoubleList<Mineral> mineralList*/)
+        public static void jsonDeserialization()
         {
             try 
             {
@@ -35,11 +35,11 @@ namespace Kursovaya_test
                 MessageBox.Show("Файл JSON не знайдено");
             }
 
-            //catch(Newtonsoft.Json.JsonSerializationException)
-            //{
-            //    MessageBox.Show("Неправильний тип у файлі JSON");
-            //}
-            catch(NullReferenceException)
+            catch (Newtonsoft.Json.JsonSerializationException)
+            {
+                MessageBox.Show("Неправильний тип у файлі JSON");
+            }
+            catch (NullReferenceException)
             {
                 MessageBox.Show("Файл CSV не знайдено");
             }
@@ -72,12 +72,8 @@ namespace Kursovaya_test
                     if (found)
                     {
                         var cols = data.Split(',');
-                        //int year = int.Parse(cols[1]) - 1;
                         do
                         {
-
-                            //if (int.Parse(cols[1]) == year + 1)
-                            //{
                             try
                             {
                                 if (System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0] == ',')
@@ -95,12 +91,6 @@ namespace Kursovaya_test
 
                                 };
                                 yearlyList.add(nextYear);
-                                //year = int.Parse(cols[1]);
-                                //else
-                                //{
-                                //    MessageBox.Show("Відсутня інформація") ;
-                                //    return null;
-                                //}
                                 
                             }
                             catch
@@ -137,11 +127,6 @@ namespace Kursovaya_test
                 return null;
             }
 
-            //catch (StringIsEmptyException a)
-            //{
-            //    MessageBox.Show(a.Message);
-            //    return null;
-            //}
         }
         public static void write(string value, string exp, string income, DoubleList<Mineral> mineralList, Mineral mineral)
         {
@@ -180,7 +165,6 @@ namespace Kursovaya_test
 
                 using (StreamWriter file = File.CreateText("../../Resources/" + countryName + ".json"))
                 {
-                    //StreamWriter write = new StreamWriter(file);
                     JsonSerializer serializer = new JsonSerializer
                     {
                         TypeNameHandling = TypeNameHandling.All,
@@ -223,15 +207,11 @@ namespace Kursovaya_test
                     income;
                 stream = new FileStream("../../Resources/" + countryName + "yearly.csv", FileMode.Open, FileAccess.Write);
                 StreamWriter writer = new StreamWriter(stream);
-                //string full = half1 + newdata;
-                //if (half2 != "")
-                //    full += half2;
 
                 writer.Write(half1);
                 writer.Write(newdata);
                 if (half2 != "")
                     writer.Write('\n' + half2);
-                //writer.Write(full);
                 writer.Flush();
                 writer.Close();
                 stream.Close();

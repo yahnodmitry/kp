@@ -17,14 +17,11 @@ namespace Kursovaya_test
         double aprice;
         string state_n;
         DoubleList<Mineral> list;
-        //Form2 form_2;
         int enter = 0;
 
         public Form3(Mineral min, string state, DoubleList<Mineral> list)
         {
             InitializeComponent();
-           
-            //form_2 = form2;
             state_n = state;
             this.min = min;
             this.list = list;
@@ -104,7 +101,6 @@ namespace Kursovaya_test
         private void Back_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //form_2.Show();
             Form2 form2 = new Form2(state_n);
             form2.Show();            
             

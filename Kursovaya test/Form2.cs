@@ -34,7 +34,7 @@ namespace Kursovaya_test
         {
             DataOperating.countryName = this.state;
             DataOperating.list = this.lst;
-            DataOperating.jsonDeserialization(/*lst*/);
+            DataOperating.jsonDeserialization();
             
             if(lst.size == 0)
             {

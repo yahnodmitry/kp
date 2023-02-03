@@ -17,7 +17,7 @@ namespace Kursovaya_test
         protected double income;
         protected double exp;
         public DoubleList<Yearly> list;
-        public Mineral(/*DoubleList<Yearly> list, */string name, double value)
+        public Mineral(string name, double value)
         {
             this.name = name;
             this.value = value;
@@ -60,8 +60,8 @@ namespace Kursovaya_test
     }
     public class Solid : Mineral
     {
-        public Solid(/*DoubleList<Yearly> list = null, */string name = "", double value = 0)
-            : base(/*list,*/ name, value)
+        public Solid(string name = "", double value = 0)
+            : base( name, value)
         {
 
         }
@@ -69,8 +69,8 @@ namespace Kursovaya_test
 
     public class Liquid : Mineral
     {
-        public Liquid(/*DoubleList<Yearly> list = null, */string name = "", double value = 0)
-            : base(/*list, */name, value)
+        public Liquid(string name = "", double value = 0)
+            : base(name, value)
         {
 
         }
@@ -78,8 +78,8 @@ namespace Kursovaya_test
 
     public class Gas : Mineral 
     {
-        public Gas(/*DoubleList<Yearly> list = null,*/ string name = "", double value = 0)
-            : base(/*list,*/ name, value)
+        public Gas( string name = "", double value = 0)
+            : base( name, value)
         {
 
         }

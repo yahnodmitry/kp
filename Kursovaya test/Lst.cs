@@ -43,15 +43,9 @@ namespace Kursovaya_test
             }
             size++;
         }
-
-        /// <summary>
-        /// строки 181 и 189 я немного изменил и добавил туда исключительные ситуации
-        /// </summary>
-        /// <param></param>
-        /// <returns></returns>
         public Node<T> find(int number)
         {
-            if (number < 0 || size <= number) return null; //исключительная ситуация 
+            if (number < 0 || size <= number) return null;
             Node<T> temporary = head;
             for (int i = 0; i < number; i++)
                 temporary = temporary.next;
@@ -59,7 +53,7 @@ namespace Kursovaya_test
         }
         public void delete(int number)
         {
-            if (number < 0 || size <= number) return;     //исключительная ситуация 
+            if (number < 0 || size <= number) return;
             Node<T> temporary = head;
             for (int i = 0; i < number; i++)
                temporary = temporary.next;

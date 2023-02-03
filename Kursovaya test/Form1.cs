@@ -56,7 +56,6 @@ namespace Kursovaya_test
         {
             string name = "Ukraine";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
 
@@ -66,7 +65,6 @@ namespace Kursovaya_test
         {
             string name = "Poland";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }
@@ -75,7 +73,6 @@ namespace Kursovaya_test
         {
             string name = "France";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }
@@ -84,7 +81,6 @@ namespace Kursovaya_test
         {
             string name = "Germany";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }
@@ -93,7 +89,6 @@ namespace Kursovaya_test
         {
             string name = "Italy";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }
@@ -102,7 +97,6 @@ namespace Kursovaya_test
         {
             string name = "Romania";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }
@@ -111,7 +105,6 @@ namespace Kursovaya_test
         {
             string name = "Spain";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }
@@ -120,7 +113,6 @@ namespace Kursovaya_test
         {
             string name = "Britain";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }   
@@ -129,7 +121,6 @@ namespace Kursovaya_test
         {
             string name = "Hungary";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }
@@ -159,7 +150,6 @@ namespace Kursovaya_test
         {
             string name = "Austria";
             Form2 form2 = new Form2(name);
-            //this.Hide();
             form2.Show();
             this.Hide();
         }

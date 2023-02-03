@@ -10,7 +10,7 @@ namespace Kursovaya_test
 
     public class MineralNotFoundException : Exception
     {
-        public MineralNotFoundException() : base(/*StandartMessage*/) { }
+        public MineralNotFoundException() : base() { }
     }
     public class WrongFormatException : Exception
     {
