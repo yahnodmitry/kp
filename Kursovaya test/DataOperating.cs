@@ -211,10 +211,11 @@ namespace Kursovaya_test
                 writer.Write(half1);
                 writer.Write(newdata);
                 if (half2 != "")
-                    writer.Write('\n' + half2);
+                writer.Write('\n' + half2);
                 writer.Flush();
                 writer.Close();
                 stream.Close();
+                MessageBox.Show("Дані записано.");
             }
             catch(WrongFormatException)
             {

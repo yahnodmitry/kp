@@ -38,7 +38,7 @@ namespace Kursovaya_test
             }
             this.avalue = sumvalue/min.list.size;
             this.aprice = sumprice / min.list.size;
-            label5.Text += " за" + (min.list.tail.data.year + 1).ToString();
+            label5.Text += " за " + (min.list.tail.data.year + 1).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
