@@ -180,12 +180,18 @@ namespace Kursovaya_test
                 StreamReader reader = new StreamReader(stream);
                 currentline = "";
                 string[] cols1 = new String[1];
-                while ((cols1[0] != newlist[0].Name || int.Parse(cols1[1]) != newlist[0].list.tail.data.year) && currentline != null)
+                while ((cols1[0] != mineral.Name || int.Parse(cols1[1]) != newlist[0].list.tail.data.year) && currentline != null)
                 {
                     currentline = reader.ReadLine();
                     cols1 = currentline.Split(',');
                     half1 += currentline + '\n';
                 }
+                //while ((cols1[0] == newlist[0].Name || int.Parse(cols1[1]) != newlist[0].list.tail.data.year) && currentline != null)
+                //{
+                //    currentline = reader.ReadLine();
+                //    cols1 = currentline.Split(',');
+                //    half1 += currentline + '\n';
+                //}
                 half1.Remove(half1.Length - 2, 1);
                 half2 = reader.ReadToEnd();
                 half2.Remove(0, 1);
@@ -200,7 +206,7 @@ namespace Kursovaya_test
                     income = income.Replace(',', '.');
                 }
 
-                string newdata = newlist[0].Name + ',' +
+                string newdata = mineral.Name + ',' +
                     year.ToString() + ',' +
                     value + ',' +
                     exp + ',' +
