@@ -46,10 +46,10 @@ namespace Kursovaya_test
             if (radioButton1.Checked == true)
             {
                 int time = int.Parse(textBox1.Text) - min.list.tail.data.year;
-
+   
                 double value = min.Value;
                 double income = 0;
-                while(value > 0)
+                while(value > 0 && time != 0)
                 {
                     if (min.Value > this.avalue)
                     {
@@ -61,9 +61,11 @@ namespace Kursovaya_test
                         income += this.aprice * value;
                         value -= this.avalue;
                     }
-                    label1.Text = "Очікуваний прибуток за " + time.ToString() + " рік: " + income.ToString();
+                    time--;
+                    
                 }
-                
+                Predict.Text = "Очікуваний прибуток за " + textBox1.Text + " рік: " + income.ToString("#.##");
+
             }
             else if (radioButton2.Checked == true)
             {
@@ -71,7 +73,7 @@ namespace Kursovaya_test
 
                 double value = min.Value;
                 double income = 0;
-                while (value > 0)
+                while (value > 0 && time != 0)
                 {
                     if (min.Value > this.avalue)
                     {
@@ -83,8 +85,9 @@ namespace Kursovaya_test
                         income += this.aprice * value;
                         value -= this.avalue;
                     }
-                    label1.Text = "Очікуваний прибуток до " + time.ToString() + " року: " + income.ToString();
+                    time--;
                 }
+                Predict.Text = "Очікуваний прибуток за " + textBox2.Text + " років: " + income.ToString("#.##");
             }
         }
 
@@ -133,6 +136,15 @@ namespace Kursovaya_test
             DataOperating.write(textBox3.Text, textBox4.Text, textBox5.Text, list, min);
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
    
